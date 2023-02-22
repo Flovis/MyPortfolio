@@ -9,8 +9,22 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Poppins", sans-serif;
-  font-size: 0.98rem;
+  font-size: 0.97rem;
   background-color: hsl(0deg, 0%, 98%);
+}
+
+button {
+  cursor: pointer;
+  display: inline-block;
+  width: 198px;
+  height: 58px;
+  border-radius: 10px;
+  border: 1px solid #252121;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+  filter: drop-shadow(0px 4px 4px #30EB9C);
 }
 
 a {
@@ -31,7 +45,6 @@ ul {
 }
 
 .header {
-  /* position: fixed; */
   top: 0;
   left: 0;
   width: 100%;
@@ -40,15 +53,17 @@ ul {
 
 nav {
   height: 3.7rem;
+  width: 100%;
   margin: 0 15%;
 }
-nav .nav__data {
+
+.nav__data {
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-nav .nav__data .nav__logo {
+.nav__data .nav__logo {
   display: inline-flex;
   align-items: center;
   -moz-column-gap: 0.25rem;
@@ -59,38 +74,19 @@ nav .nav__data .nav__logo {
   font-weight: 700;
   color: #000;
 }
-nav .nav__data .nav__logo i {
+.nav__data .nav__logo i {
   font-size: 1.7rem;
   color: #30EB9C;
 }
-nav .nav__data .nav__toggle {
+.nav__data .nav__toggle {
   position: relative;
-  width: 32px;
-  height: 32px;
 }
-nav .nav__data .nav__toggle .nav__toggle-close {
-  font-size: 1.25rem;
-  color: #000;
-  position: absolute;
-  display: grid;
-  place-items: center;
-  inset: 0;
-  transition: opacity 0.1s, transform 0.4s;
-  cursor: pointer;
-}
-nav .nav__data .nav__toggle .nav__toggle-menu {
-  font-size: 1.27rem;
+.nav__data .nav__toggle .nav__toggle-menu {
+  font-size: 1.64rem;
   font-weight: 600;
   color: #000;
-  position: absolute;
-  display: grid;
-  place-items: center;
-  inset: 0;
-  transition: opacity 0.1s, transform 0.4s;
+  width: auto;
   cursor: pointer;
-}
-nav .nav__data .nav__toggle .nav__toggle-close {
-  opacity: 0;
 }
 
 .home {
@@ -100,52 +96,61 @@ nav .nav__data .nav__toggle .nav__toggle-close {
   justify-items: center;
   gap: 5rem;
   margin: 100px 3%;
+  width: auto;
 }
-.home .home-description {
-  gap: 5px;
-}
-.home .home-description .hey {
+
+.home-description .hey {
   font-size: 2rem;
   font-weight: 100;
   width: 75%;
   max-width: 400px;
 }
-.home .home-description .name {
+.home-description .name {
   font-size: 3.8rem;
   font-weight: 600;
   color: #222020;
 }
-.home .home-description .home-title {
+.home-description .home-title {
   margin: auto;
 }
-.home .home-description .home-title .title {
+.home-description .home-title .title {
   font-size: 1.4rem;
   font-weight: 200;
   color: #222020;
   margin-bottom: 0.7rem;
 }
-.home .home-description .about-me {
+.home-description .about-me {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 200;
-  font-size: 17px;
+  font-size: 0.97rem;
   line-height: 1.5rem;
   width: 85%;
   color: #454040;
   margin-bottom: 2rem;
 }
-.home .home-description .btn-container {
+.home-description .btn-container {
   display: flex;
-  gap: 5rem;
+  gap: 70px;
 }
-.home .home-description .btn-container .btn-black {
-  border: 2px solid rgb(84, 76, 76);
-  height: 65px;
-  padding: 18px;
-  justify-content: center;
-  text-align: center;
+.home-description .btn-container .btn-contact {
+  background-color: #252121;
+  color: #fff;
+  font-size: 0.97rem;
 }
-.home .home-img {
+.home-description .btn-container .btn-contact i {
+  color: #fff;
+}
+.home-description .btn-container .btn-cv {
+  background-color: #fff;
+  color: #252121;
+  font-size: 0.97rem;
+}
+.home-description .btn-container .btn-cv i {
+  color: #fff;
+}
+
+.home-img {
   background: url("./assets/imgs/flovis.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -157,7 +162,7 @@ nav .nav__data .nav__toggle .nav__toggle-close {
   width: 18rem;
   height: 330px;
   border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-  animation: profile__animate 5s ease-in-out infinite 1s;
+  animation: profile__animate 20s ease-in-out infinite 1s;
 }
 @keyframes profile__animate {
   0% {
@@ -175,6 +180,66 @@ nav .nav__data .nav__toggle .nav__toggle-close {
 @media screen and (max-width: 750px) {
   .nav__data {
     margin: 0 10%;
+  }
+  .nav__data .nav__logo {
+    font-size: 1.5rem;
+  }
+  .home {
+    flex-direction: column-reverse;
+    align-items: center;
+    width: auto;
+    margin: 2rem 3%;
+    justify-content: center;
+    height: auto;
+  }
+  .home-description {
+    width: 100%;
+    justify-content: center;
+  }
+  .home-description .hey {
+    font-size: 22px;
+  }
+  .home-description .name {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  .home-description .about-me {
+    font-size: 15px;
+  }
+  .home-description .btn-container {
+    display: flex;
+    margin: auto;
+    width: auto;
+    gap: 20px;
+  }
+  .home-img {
+    height: 250px;
+    width: 230px;
+    border: 10px solid #1A2127;
+    animation: profile__animate 20s ease-in-out infinite 1s;
+  }
+  @keyframes profile__animate {
+    0% {
+      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+  }
+  button {
+    cursor: pointer;
+    display: inline-block;
+    width: 150px;
+    height: 58px;
+    border-radius: 10px;
+    border: 1px solid #252121;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 1;
+    filter: drop-shadow(0px 4px 4px #30EB9C);
+  }
+}
+@media screen and (max-width: 1318px) {
+  .home {
+    gap: 0.7rem;
   }
 }
 /* Navigation for Tablette */
@@ -219,11 +284,9 @@ nav .nav__data .nav__toggle .nav__toggle-close {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    margin: 0 22px;
+    width: auto;
     gap: 20px;
   }
-  /* Show icon */
 }
 @media screen and (min-width: 1118px) {
   .nav {
