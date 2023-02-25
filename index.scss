@@ -23,6 +23,7 @@ body{
     font-family: 'Poppins', sans-serif;
     font-size: $normal-font-size;
     background-color: $body-color;
+    // color: $color-black;
 }
 button{
     cursor: pointer;
@@ -53,7 +54,7 @@ ul {
 
 
 .btn-black{
-    border: 2px solid black;
+    border: 2px solid $color-black;
 }
 .header{
     top: 0;
@@ -259,7 +260,66 @@ section{
         font-size: $small-font-size;
     }
 }
-
+.skills__container{
+    height: auto;
+    width: 100%;
+    margin-top: 5rem;
+    // border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    .container__part{
+        display: flex;
+        justify-content: center;
+        gap: 5rem;     
+    }
+    
+}
+.skills__box{
+    padding: 1rem 2rem;
+    height: 370px;
+    width: 430px;
+    border-radius: 10px;
+    border: 1px solid #beb8b8;
+    box-shadow: 0px 4px 4px rgba(48, 235, 156, 0.25);
+    .title{
+        // display: flex;
+        text-align: center;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+    }
+    .skills__content{
+        display: flex;
+        width: 90%;
+        justify-content:space-between;
+        .box__inside{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            .skills__check{
+                display: flex;
+                align-items:top;
+                gap: 10px;
+                .icon__check i {
+                    color: $color-black;
+                }
+                div{
+                    p{
+                        color: $text-color;
+                        font-size: $small-font-size;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+@media screen and (max-width:500px){
+    .skills__box .skills__content{
+        width: 100%;
+    }
+}
 
 /* Navigation for mobile devices */
 @media screen and (max-width: 750px){
@@ -359,6 +419,22 @@ section{
         }
 
         
+    }
+    .skills__container{
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        margin-top: 2rem;
+        .container__part{
+            flex-direction: column;
+            width: 100%;
+            gap: 3rem;
+
+            .skills__box{
+                width: 100%;
+            }
+            
+        }
     }
     
     
