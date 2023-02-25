@@ -11,10 +11,10 @@
 </head>
 <body>
     <!--=============== HEADER ===============-->
-    <header class="header">
-        <nav class="nav">
+    <header class="header ">
+        <nav class="nav bd-containwer">
             <div class="nav__data">
-                <a href="#" class="nav__logo"><i class="ri-code-s-slash-line"></i>Flovis.</a>
+                <a href="#" class="nav__logo"><i class="ri-code-s-slash-line"></i></a>
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="ri-menu-line nav__toggle-menu"></i> 
                     <!-- <i class="ri-close-line nav__toggle-close .remove-icon"></i> -->
@@ -23,17 +23,20 @@
             <!--=============== NAV MENU ===============-->
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li>
-                        <a href="" class="nav__link">Home</a>
+                    <li class="">
+                        <a href="#home" class="nav__link active">Home</a>
                     </li>
                     <li>
-                        <a href="" class="nav__link">About</a>
+                        <a href="#about" class="nav__link">About</a>
                     </li>
                     <li>
-                        <a href="" class="nav__link">Skills</a>
+                        <a href="#skills" class="nav__link">Skills</a>
                     </li>
                     <li>
-                        <a href="" class="nav__link">Contact me</a>
+                        <a href="#projects" class="nav__link">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="nav__link">Contact me</a>
                     </li>
                     <li>
                         <div class="social-media-phone">
@@ -56,7 +59,8 @@
             <!-- </div> -->            
         </nav>
     </header>
-    <section class="home">
+    <!--=============== HOME ===============-->
+    <section class="home bd-containwer section" id="home">
         <div class="home-description">
             <div class="hey">Hey, I'm</div>
     
@@ -77,11 +81,57 @@
                 </div>
             </div>
         </div>
-        <div class="home-img">
+        <div class="home__img">
             
         </div>
     </section>
-    <!--=============== MAIN JS ===============-->
+    <!--=============== ABOUT ===============-->
+    <section class="about bd-containwer section" id="about">
+        <div> <h2 class="section-title">About</h2></div>
+        <div class="about__container">
+            <div class="about__subtitle">
+                <div class="about__box">
+                    <div class="border__header">
+                        <div class="title">Experiences</div>
+                        <div><i class="ri-award-fill"></i></div>
+                    </div>
+                    <div class="border__years">2 + years</div>
+                </div>
+                <div class="about__box">
+                    <div class="border__header">
+                        <div class="title">Project</div>
+                        <div><i class="uil uil-check-circle"></i></div>
+                    </div>
+                    <div class="border__years">5 + project</div>
+                </div>
+                <div class="about__box">
+                    <div class="border__header">
+                        <div class="title">Companies  worked</div>
+                        <div><i class="uil uil-bag-alt"></i></i></div>
+                    </div>
+                    <div class="border__years">1 company</div>
+                </div>
+            </div>
+            <div class="about__text">
+                <p>
+                    "Full-stack web developer with over 2 years of experience and project management skills. Download my resume to learn more about my background and skills. 
+                    Let's discuss your next web project together!"
+                </p>
+                <button class="btn-cv">Download Cv</button>
+            </div>
+        </div>
+
+
+    </section>
+    <!--=============== SKILLS ===============-->
+    <section class="about bd-containwer section" id="skills">
+        <div> <h2 class="section-title">Skills</h2></div>
+        <div class="about__container">
+           
+        </div>
+
+
+    </section>
     <script src="main.js"></script>
 </body>
 </html>

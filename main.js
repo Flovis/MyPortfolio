@@ -11,6 +11,7 @@
 
 // }
 // showMenu('nav-toggle', 'nav-menu')
+
 const navToggle = document.querySelector('.nav__toggle');
 const navMenu = document.querySelector('.nav__menu');
 

@@ -24,7 +24,6 @@ button {
   overflow: hidden;
   transition: all 0.5s ease-in;
   z-index: 1;
-  filter: drop-shadow(0px 4px 4px #30EB9C);
 }
 
 a {
@@ -38,6 +37,10 @@ i {
 
 ul {
   list-style: none;
+}
+
+.nav__link {
+  position: relative;
 }
 
 .btn-black {
@@ -57,6 +60,27 @@ nav {
   margin: 0 15%;
 }
 
+.section-title {
+  position: relative;
+  font-size: 1.8rem;
+  color: black;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.section-title::after {
+  position: absolute;
+  content: "";
+  width: 64px;
+  height: 0.18rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 3rem;
+  background-color: #30EB9C;
+}
+
 .nav__data {
   height: 100%;
   display: flex;
@@ -66,9 +90,8 @@ nav {
 .nav__data .nav__logo {
   display: inline-flex;
   align-items: center;
-  -moz-column-gap: 0.25rem;
-       column-gap: 0.25rem;
-  font-weight: var(--font-semi-bold);
+  -moz-column-gap: 0.65rem;
+       column-gap: 0.65rem;
   transition: 0.3s;
   font-size: 1.7rem;
   font-weight: 700;
@@ -82,21 +105,24 @@ nav {
   position: relative;
 }
 .nav__data .nav__toggle .nav__toggle-menu {
-  font-size: 1.64rem;
+  font-size: 1.59rem;
   font-weight: 600;
   color: #000;
   width: auto;
   cursor: pointer;
 }
 
-.home {
-  display: flex;
-  height: 600px;
+section {
+  height: auto;
   justify-content: center;
   justify-items: center;
   gap: 5rem;
-  margin: 100px 3%;
+  margin: 3rem 3%;
   width: auto;
+}
+
+.home {
+  display: flex;
 }
 
 .home-description .hey {
@@ -129,28 +155,31 @@ nav {
   color: #454040;
   margin-bottom: 2rem;
 }
-.home-description .btn-container {
+
+.btn-container {
   display: flex;
   gap: 70px;
 }
-.home-description .btn-container .btn-contact {
+
+.btn-contact {
   background-color: #252121;
   color: #fff;
   font-size: 0.97rem;
 }
-.home-description .btn-container .btn-contact i {
+.btn-contact i {
   color: #fff;
 }
-.home-description .btn-container .btn-cv {
+
+.btn-cv {
   background-color: #fff;
   color: #252121;
   font-size: 0.97rem;
 }
-.home-description .btn-container .btn-cv i {
+.btn-cv i {
   color: #fff;
 }
 
-.home-img {
+.home__img {
   background: url("./assets/imgs/flovis.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -176,6 +205,51 @@ nav {
   }
 }
 
+.about__container {
+  height: auto;
+  width: 100%;
+  margin-top: 5rem;
+  display: flex;
+}
+.about__container .about__subtitle {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 3rem;
+}
+.about__container .about__text {
+  width: 50%;
+  font-weight: 200;
+}
+.about__container .about__text p {
+  margin-bottom: 1.5rem;
+}
+
+.about__box {
+  width: 80%;
+  height: 100px;
+  border: 1px solid #beb8b8;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.about__box .border__header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.about__box .border__header .title {
+  font-weight: 500;
+}
+.about__box .border__header i {
+  font-size: 24px;
+  color: #252121;
+}
+.about__box .border__years {
+  margin-bottom: 0px;
+  color: hsl(0deg, 0%, 46%);
+  font-size: 0.81rem;
+}
+
 /* Navigation for mobile devices */
 @media screen and (max-width: 750px) {
   .nav__data {
@@ -188,7 +262,7 @@ nav {
     flex-direction: column-reverse;
     align-items: center;
     width: auto;
-    margin: 2rem 3%;
+    margin: 1.8rem 3%;
     justify-content: center;
     height: auto;
   }
@@ -197,14 +271,14 @@ nav {
     justify-content: center;
   }
   .home-description .hey {
-    font-size: 22px;
+    font-size: 20px;
   }
   .home-description .name {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     font-weight: 600;
   }
   .home-description .about-me {
-    font-size: 15px;
+    font-size: 13px;
   }
   .home-description .btn-container {
     display: flex;
@@ -212,10 +286,10 @@ nav {
     width: auto;
     gap: 20px;
   }
-  .home-img {
-    height: 250px;
-    width: 230px;
-    border: 10px solid #1A2127;
+  .home__img {
+    height: 240px;
+    width: 220px;
+    border: 8px solid #1A2127;
     animation: profile__animate 20s ease-in-out infinite 1s;
   }
   @keyframes profile__animate {
@@ -223,18 +297,48 @@ nav {
       border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     }
   }
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .section-title::after {
+    top: 2.4rem;
+  }
   button {
     cursor: pointer;
     display: inline-block;
-    width: 150px;
-    height: 58px;
+    width: 130px;
+    height: 50px;
     border-radius: 10px;
     border: 1px solid #252121;
     position: relative;
     overflow: hidden;
     transition: all 0.5s ease-in;
     z-index: 1;
-    filter: drop-shadow(0px 4px 4px #30EB9C);
+  }
+  .about__container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .about__container .about__subtitle {
+    width: 100%;
+    gap: 1rem;
+  }
+  .about__container .about__subtitle .about__box {
+    width: 100%;
+    height: 80px;
+    padding: 0.6rem;
+  }
+  .about__container .about__text {
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 200;
+  }
+  .about__container .about__text p {
+    margin-bottom: 1rem;
   }
 }
 @media screen and (max-width: 1318px) {
@@ -289,6 +393,35 @@ nav {
   }
 }
 @media screen and (min-width: 1118px) {
+  .bd-containwer {
+    max-width: 1200px;
+    margin: auto;
+  }
+  .active {
+    font-weight: 500;
+  }
+  .active::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0.18rem;
+    left: 0;
+    top: 2rem;
+    background-color: #30EB9C;
+  }
+  .nav__link:hover {
+    position: relative;
+    font-weight: 500;
+  }
+  .nav__link:hover::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0.18rem;
+    left: 0;
+    top: 2rem;
+    background-color: #30EB9C;
+  }
   .nav {
     height: 5rem;
     display: flex;
@@ -325,15 +458,14 @@ nav {
     opacity: 0;
     display: none;
   }
-  ul li a:hover {
-    text-shadow: 0px 4px 4px #30EB9C;
-    font-weight: 600;
-  }
   .social-media div a i {
     font-size: 1.1rem;
   }
   .social-media div a i:hover {
     text-shadow: 0px 4px 15px #30EB9C;
     font-size: 1.2rem;
+  }
+  .section {
+    margin-top: 7rem;
   }
 }/*# sourceMappingURL=index.css.map */
