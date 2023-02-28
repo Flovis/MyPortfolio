@@ -73,10 +73,10 @@
             </div>
             <div class="btn-container">
                 <div>
-                    <button class="btn-contact">Contact me <i class="uil uil-message"></i></button>
+                    <button class="btn-contact" onclick=" window.location.href = '#contact';">Contact me <i class="uil uil-message"></i></button>
                 </div>
                 <div>
-                    <button class="btn-cv">Download Cv</button>
+                    <button class="btn-cv"  onclick = "window.location.href = 'https://drive.google.com/file/d/1H0cs5NIrm_NC_awq7zRZvPv08oJjAB4g/view';">Download Cv</button>
 
                 </div>
             </div>
@@ -117,14 +117,14 @@
                     "Full-stack web developer with over 2 years of experience and project management skills. Download my resume to learn more about my background and skills. 
                     Let's discuss your next web project together!"
                 </p>
-                <button class="btn-cv">Download Cv</button>
+                <button class="btn-cv" onclick = "window.location.href = 'https://drive.google.com/file/d/1H0cs5NIrm_NC_awq7zRZvPv08oJjAB4g/view';">Download Cv</button>
             </div>
         </div>
 
 
     </section>
     <!--=============== SKILLS ===============-->
-    <section class="about bd-containwer section" id="skills">
+    <section class="bd-containwer section" id="skills">
         <div> <h2 class="section-title">Skills</h2></div>
         <div class="skills__container">
             <div class="container__part">
@@ -360,6 +360,141 @@
 
 
     </section>
+    <!--=============== PROJECTS ===============-->
+    <section class="bd-containwer section" id="projects">
+        <div> <h2 class="section-title">Projects</h2></div>
+        <div class="project__container">
+            <div class="card__container">
+                <div class="card">
+                    <div class="card-img"><img src="assets/imgs/qr.png" alt=""></div>
+                    <div class="card-info">
+                      <p class="text-title">QR code generator </p>
+                    </div>
+                    <div class="card-footer">
+                        <span><a href="https://qr-code-generator-q1l0bxofn-flovis.vercel.app/">Demo<i class="uil uil-arrow-right"></i></a></span>
+                        <a href="https://github.com/Flovis/QR-Code-generator.git    ">
+                            <div class="card-button">
+                                <i class="ri-github-fill"></i> 
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"><img src="assets/imgs/weathe.png" alt=""></div>
+                    <div class="card-info">
+                      <p class="text-title">Weather App</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="text-title"><a href="https://minuteur-nr6mycnwl-flovis.vercel.app/">Demo<i class="uil uil-arrow-right"></i></a></span>
+                        <a href="https://github.com/Flovis/minuteur.git">
+                            <div class="card-button">
+                                <i class="ri-github-fill"></i> 
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"><img src="assets/imgs/projet3.png" alt=""></div>
+                    <div class="card-info">
+                      <p class="text-title">Contact list</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="text-title"><a href="">In dev<i class="uil uil-arrow-right"></i></a></span>
+                        <a href="https://github.com/Flovis/carnet_contact.git">
+                            <div class="card-button">
+                                <i class="ri-github-fill"></i> 
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </section>
+    <section class="bd-containwer section" id="contact">
+        <div> <h2 class="section-title">Contact me</h2></div>
+        <div class="contact__container">
+            <div class="contact__info">
+                <div class="title">Tallk to me</div>
+                <div class="box__container">
+                    <div class="box__info">
+                        <a href="https://api.whatsapp.com/send?phone=+243824092951">
+                            <div class="icon">
+                                <i class="ri-whatsapp-line"></i>
+                            </div>
+                        </a>
+                        <div>
+                            <div class="box__text">let's talk</div>
+                            <div>+243 82 409 29 51</div>
+                        </div>
+                    </div>
+                    <div class="box__info">
+                        <a href="mailto:floviskabandafkm@gmail.com">
+                            <div class="icon">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                        </a>
+                        <div>
+                            <div class="box__text">let's talk</div>
+                            <div>+243 82 409 29 51</div>
+                        </div>
+                    </div>
+                    <!-- <div class="box__info">
+                        <a href="https://api.whatsapp.com/send?phone=+243824092951">
+                            <div class="icon">
+                                <i class="ri-whatsapp-line"></i>
+                            </div>
+                        </a>
+                        <div>
+                            <div class="box__text">let's talk</div>
+                            <div>+243 82 409 29 51</div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="contact__form">
+                <div class="title">Tallk about your project</div>
+                <form action="" class="form">
+                    <div class="input-group">
+                        <input type="text" name="name" placeholder="Your Name" id="name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" name="email"  placeholder="Your Email" id="email" required>
+                    </div>
+                    <div class="input-group">
+                        <textarea name="text" cols="30" rows="10" id="message" placeholder="Your message" required></textarea>
+                    </div>
+                    <div class="submit">
+                        <button class="btn-contact" id="btn-contact">Contact me <i class="uil uil-message"></i></button>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+
+
+    </section>
+    <footer class="bd-containwer">
+        <div class="rigth__reserved">All Rigths Reserved</div>
+        <div>By Flovis Kabanda</div>
+        <div class="social-media">
+            <div><a href="https://github.com/Flovis"><i class="uil uil-github"></i></a></div>
+            <div><a href="https://linkedin.com/in/flovis-kabanda-6ab7791b2"><i class="uil uil-linkedin"></i></a></div>
+            <div><a href="https://twitter.com/FlovisKabanda"><i class="uil uil-twitter"></i></a></div>
+            <div><a href="https://instagram.com/floviskabanda?igshid=ZDdkNTZiNTM="><i class="uil uil-instagram"></i></a></div>
+        </div>
+    </footer>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("i_9LeZFt0qcJLaSs5");
+    })();
+    </script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
